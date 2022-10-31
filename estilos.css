@@ -27,11 +27,25 @@
 .checkout__container {
     /* VER EL INCLUDES */
     gap: 30px;
+    padding-left: 12vw;
+    padding-right: 12vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.checkout__table {
+    align-items: center;
+}
+
+.checkout__imagen {
+    width: 8vw;
+}
+
+.checkout__tacho {
+    height: 2rem;
 }
 
 .card {
@@ -129,3 +143,4 @@ code {
     padding: 40px;
     color: red;
 }
+

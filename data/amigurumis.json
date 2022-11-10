@@ -1,0 +1,75 @@
+[
+    {
+        "id": 123,
+        "imagen": "gatito",
+        "nombre": "Gatito",
+        "precio": 4000
+    },
+    {
+        "id": 234,
+        "imagen": "hiporosa",
+        "nombre": "Hipo de apego",
+        "precio": 6000
+    },
+    {
+        "id": 345,
+        "imagen": "dino",
+        "nombre": "Dino Andino",
+        "precio": 2500
+    },
+    {
+        "id": 456,
+        "imagen": "collarlactancia",
+        "nombre": "Collar de lactancia",
+        "precio": 2000
+    },
+    {
+        "id": 567,
+        "imagen": "corazonborla",
+        "nombre": "Borla de corazón", 
+        "precio": 3000
+    },
+    {
+        "id": 678,
+        "imagen": "mordillozorrito",
+        "nombre": "Mordillo de Zorrito",
+        "precio": 4000
+    },
+    {
+        "id": 789,
+        "imagen": "titereoso",
+        "nombre": "Títere de oso",
+        "precio": 2500
+    },
+    {
+        "id": 890,
+        "imagen": "perro",
+        "nombre": "Perrito",
+        "precio": 4000
+    },
+    {
+        "id": 901,
+        "imagen": "muneca",
+        "nombre": "Muñeca",
+        "precio": 5500
+    },
+    {
+        "id": 902,
+        "imagen": "banderinescuna",
+        "nombre": "Banderines para cuna",
+        "precio": 5000
+    },
+    {
+        "id": 123,
+        "imagen": "colgantelechuza",
+        "nombre": "Colgante de lechuza",
+        "precio": 5000
+    },
+    {
+        "id": 123,
+        "imagen": "colgantecorazones",
+        "nombre": "Colgante de corazones",
+        "precio": 5000
+    }
+]
+

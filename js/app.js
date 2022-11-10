@@ -1,7 +1,10 @@
+let productos = []
+const carrito = []
+const URL = "../data/amiguddrumis.json"
 const container = document.querySelector("div.container")
 
 const activarBotonesAdd = () => {
-    const botonesAdd = document.querySelectorAll(".button.button-outline")
+    const botonesAdd = document.querySelectorAll(".btnAgregar")
     botonesAdd.forEach(btn => {
         btn.addEventListener("click", () => {
             agregarAlCarrito(btn.id)
@@ -9,13 +12,23 @@ const activarBotonesAdd = () => {
     })
 }
 
-const cargarProductos = () => {
-    container.innerHTML = ""
-    productos.forEach(producto => {
-        container.innerHTML += retornoCard(producto)
-    })
-    activarBotonesAdd()
+const cargarTarjetas = async () => {
+    let generarHTML = ""
+    let activarBtn = true
+
+    try {
+        const respuesta = await fetch(URL)
+        productos = await respuesta.json()
+        productos.forEach(producto => generarHTML += retornoCard(producto))
+    } catch (error) {
+        generarHTML = devuelveError()
+        activarBtn = false
+    } finally {
+        container.innerHTML = generarHTML 
+        activarBtn && activarBotonesAdd()
+    }
 }
+
 
 const agregarAlCarrito = (amigurumis) => {
     let resultado = productos.find(prod => prod.nombre === amigurumis)
@@ -44,4 +57,4 @@ const recuperarCarrito = () => {
 recuperarCarrito()
 
 //SE CARGAN LOS PRODUCTOS EN EL INDEX.HTML
-cargarProductos()
+cargarTarjetas()

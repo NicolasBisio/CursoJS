@@ -1,3 +1,6 @@
+let productos = []
+const carrito = []
+
 const retornoCard = ({imagen, nombre, precio}) => {
     return `<div class="card">
                 <div class=""><img src="./img/${imagen}.jpg" alt="${imagen}" class="card__imagen" title="${nombre}"></div>
@@ -16,7 +19,7 @@ const devuelveError = ()=> {
                 <div class="index__error--titulo">Hemos tenido un inconveniente para cargar los amigurumis</div>
                 <div class="index__error--subtitulo">Por favor, aguarde unos instantes e intente nuevamente</div>
                 <div class="boton card-button">
-                    <a href="index.html"><button class="btnAgregar">Intentar de nuevo</button></a>
+                    <a href="index.html"><button class="btn">Intentar de nuevo</button></a>
                 </div>
             </div>`
 }

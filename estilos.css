@@ -9,7 +9,7 @@ body {
     background-color: #ffffff;
 }
 
-.index__error{
+.index__error {
     padding-top: 0rem;
     display: flex;
     flex-direction: column;
@@ -17,11 +17,11 @@ body {
     text-align: center;
 }
 
-.index__error--titulo{
+.index__error--titulo {
     font-size: 2.2rem;
 }
 
-.index__error--subtitulo{
+.index__error--subtitulo {
     font-size: 1.9rem;
     padding: 1rem 0 3rem 0;
 }
@@ -66,13 +66,13 @@ body {
     cursor: pointer;
 }
 
-.checkout__columna { 
+.checkout__columna {
     width: 100px;
 }
 
 .btnAgregar {
     background-color: aquamarine;
-    border-color:rgb(184, 43, 79);
+    border-color: rgb(184, 43, 79);
 }
 
 .header {
@@ -126,12 +126,22 @@ body {
     color: #5f3700;
 }
 
+.btn,
 .btnAgregar {
     background-color: #ffefef;
     color: #db8585;
     border: 1.5px solid #ffc3c3;
 }
 
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn:active:focus
 .btnAgregar:hover,
 .btnAgregar:focus,
 .btnAgregar:active,
@@ -158,13 +168,7 @@ h4 {
     font-weight: 500;
 }
 
-p,
-span,
-strong,
-em,
-code {
-    font-size: larger;
-}
+
 
 .card-error {
     box-shadow: 0px 6px 20px rgba(255, 0, 0, 0.147);
@@ -182,14 +186,14 @@ table {
     text-align: left;
 }
 
-@media (max-width: 639px){
+@media (max-width: 639px) {
     .checkout__container {
         padding-left: 13vw;
         padding-right: 5vw;
     }
 }
 
-@media (max-width: 530px){
+@media (max-width: 530px) {
     .checkout__container {
         padding-left: 5vw;
         padding-right: 5vw;

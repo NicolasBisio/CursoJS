@@ -1,6 +1,4 @@
-let productos = []
-const carrito = []
-const URL = "../data/amiguddrumis.json"
+const URL = "../data/amigurumis.json"
 const container = document.querySelector("div.container")
 
 const activarBotonesAdd = () => {
@@ -15,7 +13,7 @@ const activarBotonesAdd = () => {
 const cargarTarjetas = async () => {
     let generarHTML = ""
     let activarBtn = true
-
+ 
     try {
         const respuesta = await fetch(URL)
         productos = await respuesta.json()

@@ -1,3 +1,41 @@
+const btnComprar = document.querySelector(".btn.btn__comprar")
+
+const cargando = () => `<img src="./img/loading.gif" class="imagen__carga" alt="cargando" title="Confirmando su compra">`
+
+const mensajeCompra = (titulo, textoBoton, icono) => {
+    return Swal.fire({
+        title: titulo,
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        },
+        icon: icono,
+        confirmButtonText: textoBoton
+    })
+}
+
+const carritoVacio = () => {
+    mensajeCompra("Por favor, agregar al carrito al menos un amigurumi.", "Ir a comprar", "warning")
+}
+
+const compraExitosa = () => {
+    btnComprar.innerHTML = cargando()
+    setTimeout(() => {
+        btnComprar.innerHTML = "Realizado"
+        mensajeCompra("¡Muchas gracias por su compra!", "Volver al sitio", "success").then(result => {
+            if (result.isConfirmed) {
+                localStorage.removeItem("carrito")
+                location.href = "index.html"
+            }
+        })
+    }, 5000);
+}
+
+btnComprar.addEventListener("click", () => carrito.length > 0 ? compraExitosa() : carritoVacio())
+
+
 const recuperarCarrito = () => {
     if (localStorage.getItem("carrito")) {
         let carritoRecuperado = JSON.parse(localStorage.getItem("carrito"))
@@ -46,14 +84,12 @@ const activarBotonesDelete = () => {
 
 const activarBotonDeleteAll = () => {
     const botonDeleteAll = document.querySelector(".checkout__deleteall")
-    botonDeleteAll.addEventListener("click", ()=> {
+    botonDeleteAll.addEventListener("click", () => {
         let productosCarrito = carrito.length
         carrito.splice(0, productosCarrito)
         localStorage.setItem("carrito", JSON.stringify(carrito))
         mostrarCarrito()
     })
-
-
 }
 
 

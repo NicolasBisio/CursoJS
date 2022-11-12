@@ -9,6 +9,10 @@ body {
     background-color: #ffffff;
 }
 
+.imagen__carga {
+    width: 3vw;
+}
+
 .index__error {
     padding-top: 0rem;
     display: flex;
@@ -47,8 +51,7 @@ body {
 
 .checkout__container {
     gap: 30px;
-    padding-left: 12vw;
-    padding-right: 12vw;
+    padding: 0 12vw 5rem 12vw;
     display: flex;
     flex-direction: row;
     align-items: center;

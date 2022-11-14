@@ -22,19 +22,10 @@ const carritoVacio = () => {
 
 const compraExitosa = () => {
     btnComprar.innerHTML = cargando()
-    setTimeout(() => {
-        btnComprar.innerHTML = "Realizado"
-        mensajeCompra("¡Muchas gracias por su compra!", "Volver al sitio", "success").then(result => {
-            if (result.isConfirmed) {
-                localStorage.removeItem("carrito")
-                location.href = "index.html"
-            }
-        })
-    }, 5000);
+    new Compra()
 }
 
 btnComprar.addEventListener("click", () => carrito.length > 0 ? compraExitosa() : carritoVacio())
-
 
 const recuperarCarrito = () => {
     if (localStorage.getItem("carrito")) {
@@ -66,13 +57,13 @@ const mostrarCarrito = () => {
                                 <th>$ ${totalCarrito}</th>
                                 <th><img src="./img/tacho.png" alt="delete" class="checkout__deleteall" title="Borrar todo"></th>
                             </tr>`
-    activarBotonesDelete()
-    activarBotonDeleteAll()
+    btnDeleteOn()
+    btnDeleteAllOn()
 }
 
-const activarBotonesDelete = () => {
-    const botonesDelete = document.querySelectorAll(".checkout__delete")
-    botonesDelete.forEach(btn => {
+const btnDeleteOn = () => {
+    const btnDelete = document.querySelectorAll(".checkout__delete")
+    btnDelete.forEach(btn => {
         btn.addEventListener("click", (e) => {
             let aEliminar = carrito.findIndex(producto => producto.nombre === e.target.id)
             carrito.splice(aEliminar, 1)
@@ -82,9 +73,9 @@ const activarBotonesDelete = () => {
     })
 }
 
-const activarBotonDeleteAll = () => {
-    const botonDeleteAll = document.querySelector(".checkout__deleteall")
-    botonDeleteAll.addEventListener("click", () => {
+const btnDeleteAllOn = () => {
+    const btnDeleteAll = document.querySelector(".checkout__deleteall")
+    btnDeleteAll.addEventListener("click", () => {
         let productosCarrito = carrito.length
         carrito.splice(0, productosCarrito)
         localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -92,9 +83,7 @@ const activarBotonDeleteAll = () => {
     })
 }
 
-
-//SE RECUPERA EL CARRITO AL CARGAR INDEX.HTML
-recuperarCarrito()
+recuperarCarrito() //SE RECUPERA EL CARRITO AL CARGAR INDEX.HTML
 
 //SE MUESTRAN LOS PRODUCTOS EN LA TABLA DE CHECKOUT.HTML
 /* carrito.length > 0 &&  */

@@ -13,6 +13,20 @@ body {
     width: 3vw;
 }
 
+.index__carrito{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contenedor__numero--carrito{
+    padding-top: 20px;
+    font-family: 'PT Sans', serif;
+    color: red;
+    font-size: large;
+    font-weight: 700;
+}
+
 .index__error {
     padding-top: 0rem;
     display: flex;
@@ -73,11 +87,6 @@ body {
     width: 100px;
 }
 
-.btnAgregar {
-    background-color: aquamarine;
-    border-color: rgb(184, 43, 79);
-}
-
 .header {
     padding-right: 1rem;
     display: flex;
@@ -136,7 +145,6 @@ body {
     border: 1.5px solid #ffc3c3;
 }
 
-
 .btn:hover,
 .btn:focus,
 .btn:active,
@@ -159,7 +167,6 @@ body {
     box-shadow: none;
 }
 
-
 body {
     padding: 20px;
 }
@@ -169,16 +176,6 @@ h2,
 h3,
 h4 {
     font-weight: 500;
-}
-
-
-
-.card-error {
-    box-shadow: 0px 6px 20px rgba(255, 0, 0, 0.147);
-    border: 1px solid darkred;
-    border-radius: 6px;
-    padding: 40px;
-    color: red;
 }
 
 table {

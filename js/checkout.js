@@ -83,8 +83,5 @@ const btnDeleteAllOn = () => {
     })
 }
 
-recuperarCarrito() //SE RECUPERA EL CARRITO AL CARGAR INDEX.HTML
-
-//SE MUESTRAN LOS PRODUCTOS EN LA TABLA DE CHECKOUT.HTML
-/* carrito.length > 0 &&  */
+recuperarCarrito()
 mostrarCarrito()

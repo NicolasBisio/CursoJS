@@ -2,7 +2,7 @@ const URL = "https://636e8c97bb9cf402c804b356.mockapi.io/Amigurumis"
 const container = document.querySelector("div.container")
 const numero = document.querySelector(".contenedor__numero--carrito")
 
-const activarBotonesAdd = () => {
+const botonesAddOn = () => {
     const botonesAdd = document.querySelectorAll(".btnAgregar")
     botonesAdd.forEach(btn => {
         btn.addEventListener("click", () => {
@@ -24,7 +24,7 @@ const cargarTarjetas = async () => {
         activarBtn = false
     } finally {
         container.innerHTML = generarHTML
-        activarBtn && activarBotonesAdd()
+        activarBtn && botonesAddOn()
     }
 }
 
@@ -72,6 +72,6 @@ const recuperarCarrito = () => {
     }
 }
 
-recuperarCarrito() //SE RECUPERA EL CARRITO AL CARGAR INDEX.HTML
-cargarTarjetas() //SE CARGAN LOS PRODUCTOS EN EL INDEX.HTML
+recuperarCarrito()
+cargarTarjetas()
 numeroCarrito()
